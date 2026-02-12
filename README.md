@@ -1,3 +1,11 @@
+Got it 👍
+Here is the FINAL, clean, FULL copy-paste README.md with ALL pricing / payment / money references removed.
+
+You can paste this as-is into README.md in your repo.
+
+⸻
+
+
 # 🚀 PikaOS Server
 
 **PikaOS Server** is an experimental, self-hosted server dashboard and runtime built by **Zeke**.  
@@ -41,7 +49,9 @@ http://localhost:8000
 
 
 
-Local vs Public Access
+⸻
+
+🌐 Local vs Public Access
 	•	Default: 127.0.0.1 (local only, recommended)
 	•	Optional: 0.0.0.0 (public / network access)
 
@@ -53,7 +63,7 @@ When public access is enabled, a warning is shown:
 
 🔐 Authentication
 
-PikaOS Server uses PikaLogin, a self-hosted authentication service.
+PikaOS Server uses PikaLogin, a self-hosted authentication system.
 	•	Login required to access the dashboard
 	•	Public exposure requires explicit opt-in
 	•	Designed for trusted environments
@@ -62,32 +72,16 @@ This is not enterprise-grade authentication.
 
 ⸻
 
-🤖 AI Features (Optional)
+🤖 AI Features
+
+AI features are:
+	•	Optional
 	•	Disabled by default
-	•	Uses Groq (gpt-oss) via a server-side API key
+	•	Server-side only
 	•	Rate-limited
-	•	Depends on third-party availability
+	•	Dependent on third-party availability
 
-AI features may be limited or unavailable at any time.
-
-⸻
-
-💸 Pricing Model
-	•	🆓 Free
-	•	All core features
-	•	Dashboard, logs, network view
-	•	❌ No AI
-	•	⭐ Premium
-	•	AI features enabled
-	•	Usage billed per minute
-	•	🏢 Company
-	•	No AI limits
-	•	Custom usage
-	•	🏛️ Government / Education
-	•	Full access
-	•	Free
-
-Pricing and AI availability may change.
+AI may be unavailable at any time.
 
 ⸻
 
@@ -125,3 +119,4 @@ Do not expose to the public internet unless you understand the risks.
 MIT License © 2026 Zeke Cheng
 
 ---
+
