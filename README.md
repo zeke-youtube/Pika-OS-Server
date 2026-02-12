@@ -1,11 +1,3 @@
-Got it 👍
-Here is the FINAL, clean, FULL copy-paste README.md with ALL pricing / payment / money references removed.
-
-You can paste this as-is into README.md in your repo.
-
-⸻
-
-
 # 🚀 PikaOS Server
 
 **PikaOS Server** is an experimental, self-hosted server dashboard and runtime built by **Zeke**.  
