@@ -203,7 +203,17 @@ Summary:
 	•	No audit
 	•	No guarantees
 	•	Operator is responsible
+⸻
+# Commercial Use
 
+PikaOS Server may be used commercially.
+
+For companies that require:
+- custom features
+- support
+- internal deployment assistance
+
+Please contact the maintainer.
 ⸻
 
 📄 License
