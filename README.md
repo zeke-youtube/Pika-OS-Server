@@ -1,108 +1,208 @@
 # 🚀 PikaOS Server
 
-**PikaOS Server** is an experimental, self-hosted server dashboard and runtime built by **Zeke**.  
-Run one Python file, open a browser, and manage everything through a modern web dashboard.
+> Experimental, self-hosted server dashboard focused on **visibility**, not magic.
 
-> ⚠️ **Disclaimer**  
-> This project is experimental.  
+**PikaOS Server** is an experimental server runtime and web dashboard built by **Zeke**.  
+Run one Python file, open a browser, and observe what your server is doing in real time.
+
+This project is designed for **learning, experimentation, and transparency** — not production or enterprise use.
+
+📘 **Documentation (Wiki):**  
+https://github.com/zeke-youtube/Pika-OS-Server/wiki
+
+---
+
+## ⚠️ Disclaimer
+
+> **This project is experimental.**  
 > **Security is the responsibility of the operator.**
+
+PikaOS Server:
+- has not been security audited
+- is not production-hardened
+- makes no security guarantees
+
+If you expose it to the internet, you do so at your own risk.
 
 ---
 
 ## ✨ Features
 
 - 🖥️ **Modern Web Dashboard**  
-  Clean, fast UI accessible from your browser.
+  Clean, browser-based interface.
 
-- 🌐 **Network Activity Dashboard**  
-  View traffic, connections, and request activity.
+- 🌐 **Network Visibility**  
+  View traffic, connections, and activity patterns.
 
 - 📜 **System & Access Logs**  
-  Real-time logs for debugging and monitoring.
+  Real-time logs for transparency and debugging.
 
-- 🚨 **Traffic Anomaly / DDoS Detection**  
-  Detect abnormal traffic spikes.  
+- 🚨 **Traffic Anomaly Detection**  
+  Detect unusual traffic behavior.  
   *Mitigation: coming soon™*
 
 - 🤖 **Optional AI Features**  
-  Server-side AI calls using `gpt-oss` via Groq (rate-limited).
+  Experimental AI assistance using `gpt-oss` via Groq (server-side only).
 
 ---
 
-## 🧠 How It Works
+## 🧠 Project Philosophy
 
-1. Start the server:
-   ```bash
-   python server.py
+PikaOS Server is built around these ideas:
 
-	2.	Open the dashboard:
+- **Safe defaults** (local-only by default)
+- **Explicit warnings** for risky actions
+- **Visibility over enforcement**
+- **No hidden behavior**
+- **No overpromising**
+
+This project does **not** try to:
+- replace firewalls
+- provide enterprise security
+- silently block attacks
+- act like a full operating system
+
+---
+
+## ▶️ Getting Started
+
+### Requirements
+- Python 3.9+
+- A modern web browser
+
+### Run the server
+```bash
+python server.py
+```
+Open the dashboard
 
 http://localhost:8000
 
-
+Default mode is local-only and recommended.
 
 ⸻
 
 🌐 Local vs Public Access
-	•	Default: 127.0.0.1 (local only, recommended)
-	•	Optional: 0.0.0.0 (public / network access)
+	•	Local (recommended):
+
+127.0.0.1
+
+
+	•	Public / Network (optional):
+
+0.0.0.0
+
+
 
 When public access is enabled, a warning is shown:
 
 “Chill bro 😅 — this is not 100% secure.”
+
+Public exposure is always opt-in.
 
 ⸻
 
 🔐 Authentication
 
 PikaOS Server uses PikaLogin, a self-hosted authentication system.
-	•	Login required to access the dashboard
-	•	Public exposure requires explicit opt-in
+	•	Authentication is enabled by default
 	•	Designed for trusted environments
+	•	Prevents accidental access
+	•	Not enterprise-grade security
 
-This is not enterprise-grade authentication.
+Authentication exists to reduce exposure, not to guarantee safety.
 
 ⸻
 
-🤖 AI Features
-
-AI features are:
-	•	Optional
+🤖 AI Features (Optional)
 	•	Disabled by default
-	•	Server-side only
+	•	Runs server-side only
+	•	Uses gpt-oss via Groq
+	•	Requires a user-provided API key
 	•	Rate-limited
-	•	Dependent on third-party availability
 
-AI may be unavailable at any time.
+AI is intended to assist, not automate decisions.
+
+Create a .env file if you want AI:
+
+GROQ_API_KEY=your_api_key_here
+
 
 ⸻
 
-⚠️ Security Notice
-	•	Experimental software
-	•	No security audit
-	•	No guarantee of safety
-	•	Not production-hardened
+📁 Configuration
 
-Do not expose to the public internet unless you understand the risks.
+Main configuration is handled in:
+
+configfile.py
+
+Configuration controls:
+	•	host & port
+	•	authentication
+	•	AI features
+	•	logging
+	•	experimental flags
+
+Restart the server after changes.
+
+⸻
+
+🔍 Observability, Not Protection
+
+PikaOS Server focuses on:
+	•	logs
+	•	network visibility
+	•	transparency
+
+It does not:
+	•	block traffic
+	•	prevent DDoS attacks
+	•	enforce security policies
+
+Use proper firewalls and infrastructure if exposing publicly.
+
+⸻
+
+🧪 Project Status
+
+🚧 Early development
+	•	APIs may change
+	•	Features may be incomplete
+	•	Breaking changes may occur
+	•	“Coming soon™” means no promises
+
+Stability and clarity matter more than feature count.
 
 ⸻
 
 🛠️ Tech Stack
-	•	Python (backend)
+	•	Python
+	•	Flask
 	•	Web dashboard (HTML / JS)
 	•	Optional AI via Groq (gpt-oss)
-	•	Self-hosted authentication
-	•	Cloudflare-hosted auth service
+	•	GitHub CodeQL & Dependabot enabled
 
 ⸻
 
-📌 Roadmap
-	•	Improved traffic anomaly detection
-	•	Optional DDoS mitigation
-	•	More dashboard modules
-	•	Plugin / runtime expansion
+🤝 Contributing
 
-(“Coming soon” means whenever it actually comes.)
+Contributions are welcome, but expectations are realistic.
+	•	Read CONTRIBUTING.md
+	•	Open issues for bugs or ideas
+	•	Small, focused PRs preferred
+
+Not everything will be merged.
+
+⸻
+
+🔐 Security
+
+See SECURITY.md for full details.
+
+Summary:
+	•	No audit
+	•	No guarantees
+	•	Operator is responsible
 
 ⸻
 
@@ -110,5 +210,13 @@ Do not expose to the public internet unless you understand the risks.
 
 MIT License © 2026 Zeke Cheng
 
----
+⸻
 
+🧠 Final Note
+
+PikaOS Server is honest about what it is — and what it is not.
+
+If you want a polished, enterprise-ready solution, this project is probably not for you.
+If you want to learn, experiment, and observe, welcome 😄
+
+---
